@@ -120,7 +120,7 @@ function lpop_install()
 
 function lpop_activate()
 {
-	global $db, $lang, $mybb, $theme;
+	global $db, $lang, $mybb;
 
 	// Enable the plugin
 	if($mybb->settings['lpop_enabled'] == 0)
@@ -200,7 +200,7 @@ function lpop_uninstall()
 function lpop_display()
 {
 	// note: $lpop_profile must be global for it be inserted properly into the template
-	global $db, $templates, $lang, $mybb, $lpop_profile;
+	global $db, $templates, $theme, $lang, $mybb, $lpop_profile;
 
 	// Make sure plugin is enabled
 	if(!isPluginEnabled())
